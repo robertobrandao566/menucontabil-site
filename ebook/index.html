@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>E-book grátis: Do MEI à ME · Menu Contábil</title>
+<meta name="description" content="Guia gratuito para donos de lanchonete, hamburgueria e delivery que estão chegando no limite do MEI.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="E-book grátis: Do MEI à ME — o que muda quando seu delivery cresce">
+<meta property="og:description" content="Limite do MEI em 2026, o novo teto aprovado, o que fazer se estourar o faturamento e checklist da transição.">
+<meta property="og:image" content="https://menucontabil.net.br/ebook/capa.jpg">
+<meta property="og:url" content="https://menucontabil.net.br/ebook/">
+<link rel="canonical" href="https://menucontabil.net.br/ebook/">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: site institucional no padrão dos escritórios de Fortaleza — barra de contato, hero com dois botões, quem somos, serviços em grade, segmentos, dúvidas, formulário e rodapé completo. Visual claro, laranja da marca como destaque. */
+:root{
+  --branco:#FFFFFF; --creme:#FFF8F0; --creme-2:#F7EFE6; --linha:#EADFD3;
+  --grafite:#1D1B19; --grafite-2:#2A2623; --texto:#2B2724; --texto-2:#6A5D55; --texto-claro:#C9BDB2;
+  --laranja:#E4572E; --laranja-esc:#C7451F; --laranja-suave:#FDE9E1; --marrom:#8A5A48;
+  --f:"Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --wrap:1160px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--branco)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--branco);color:var(--texto);font-family:var(--f);font-size:16.5px;line-height:1.65}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--branco)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f);font-weight:800;line-height:1.15;letter-spacing:-.02em;text-wrap:balance;margin:0;color:var(--grafite)}
+p{margin:0}
+.hl{color:var(--laranja)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--laranja)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--laranja)}
+svg.i{width:22px;height:22px;flex:none}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f);font-weight:700;font-size:.98rem;text-decoration:none;border:0;cursor:pointer;border-radius:8px;padding:14px 24px;background:var(--laranja);color:#fff;transition:background .15s,color .15s}
+.btn:hover{background:var(--laranja-esc)}
+.btn.out{background:transparent;color:var(--grafite);box-shadow:inset 0 0 0 1.5px var(--grafite)}
+.btn.out:hover{background:var(--grafite);color:#fff}
+.btn.sm{padding:10px 18px;font-size:.92rem}
+.btn svg{width:18px;height:18px}
+
+/* barra superior */
+.topbar{background:var(--grafite);color:var(--texto-claro);font-size:.85rem}
+.topbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding-block:8px}
+.topbar span,.topbar a{display:inline-flex;align-items:center;gap:7px;text-decoration:none}
+.topbar a:hover{color:#fff}
+.topbar svg{width:15px;height:15px;color:var(--laranja)}
+.topbar .r{display:flex;gap:22px}
+@media (max-width:640px){.topbar .l{display:none}}
+
+/* cabeçalho */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:29px;height:37px;flex:none}
+.brand b{font-weight:800;font-size:1.3rem;letter-spacing:-.03em;color:var(--grafite)}
+.brand b span{color:var(--laranja)}
+.brand small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2);margin-top:-2px}
+nav.links{display:flex;gap:26px;font-size:.94rem;font-weight:600}
+nav.links a{text-decoration:none;color:var(--texto-2);padding-block:6px;border-bottom:2px solid transparent}
+nav.links a:hover{color:var(--grafite);border-color:var(--laranja)}
+@media (max-width:960px){nav.links{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(90deg,var(--creme) 0%,var(--creme) 40%,rgba(255,248,240,.82) 55%,rgba(255,248,240,0) 78%),url("hero.jpg") right 30%/cover no-repeat var(--creme)}
+@media (max-width:920px){.hero{background:linear-gradient(180deg,rgba(255,248,240,.9) 0%,rgba(255,248,240,.94) 100%),url("hero.jpg") 80% center/cover no-repeat var(--creme)}}
+.hero .wrap{padding-block:72px 80px}
+.hero .wrap > div{max-width:780px}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);margin-top:16px}
+.hero .lede{font-size:1.12rem;color:var(--texto-2);max-width:52ch;margin-top:20px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--linha);list-style:none;padding-left:0;margin-bottom:0;font-size:.92rem;font-weight:600;color:var(--texto)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;color:var(--laranja)}
+@media (max-width:920px){.hero .wrap{padding-block:48px 56px}}
+section.block{padding-block:88px}
+.alt{background:var(--creme)}
+.head{display:grid;gap:14px;max-width:720px;margin-bottom:44px}
+.head.center{margin-inline:auto;text-align:center;justify-items:center}
+.head h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.head p{color:var(--texto-2);font-size:1.06rem}
+
+/* sobre */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about .txt{display:grid;gap:18px;color:var(--texto-2);font-size:1.04rem}
+.about .txt h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:4px}
+.values{display:grid;gap:16px}
+.value{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;padding:20px;border:1px solid var(--linha);border-radius:12px;background:var(--branco)}
+.ibox{width:52px;height:52px;border-radius:12px;background:var(--laranja-suave);color:var(--laranja);display:grid;place-items:center}
+.ibox svg{width:26px;height:26px}
+.value b{display:block;font-size:1.05rem;color:var(--grafite)}
+.value span{display:block;color:var(--texto-2);font-size:.95rem;margin-top:2px}
+@media (max-width:920px){.about{grid-template-columns:1fr;gap:36px}}
+
+/* serviços */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,box-shadow .2s;min-width:0}
+.card:hover{border-color:var(--laranja);box-shadow:0 18px 36px -24px rgba(228,87,46,.45)}
+.card h3{font-size:1.15rem;font-weight:700}
+.card p{color:var(--texto-2);font-size:.95rem;flex:1}
+.card a{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.92rem;color:var(--laranja);text-decoration:none}
+.card a svg{width:16px;height:16px;transition:transform .2s}
+.card a:hover svg{transform:translateX(3px)}
+@media (max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+/* segmentos */
+.dark{background:var(--grafite);color:#fff}
+.dark h2{color:#fff}
+.dark .head p{color:var(--texto-claro)}
+.segs{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;list-style:none;margin:0;padding:0}
+.segs li{border:1px solid #3B3632;border-radius:12px;padding:22px 16px;display:grid;justify-items:center;gap:12px;text-align:center;font-weight:700;font-size:.95rem;background:var(--grafite-2)}
+.segs svg{width:30px;height:30px;color:var(--laranja)}
+@media (max-width:1060px){.segs{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:480px){.segs{grid-template-columns:1fr 1fr}}
+
+/* etapas */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:10px;align-content:start;min-width:0}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--laranja);color:#fff;font-weight:800;font-size:1.1rem}
+.steps b{font-size:1.08rem;color:var(--grafite)}
+.steps p{color:var(--texto-2);font-size:.94rem}
+@media (max-width:920px){.steps{grid-template-columns:1fr 1fr;gap:32px 22px}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+/* faq */
+.faq{max-width:840px;margin-inline:auto;display:grid;gap:12px}
+.faq details{background:var(--branco);border:1px solid var(--linha);border-radius:12px}
+.faq details[open]{border-color:var(--laranja)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 56px 18px 22px;font-weight:700;color:var(--grafite);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:500;color:var(--laranja);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--texto-2);padding:0 22px 20px;max-width:70ch}
+
+/* contato */
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.cinfo{display:grid;gap:22px}
+.cinfo h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.cinfo > p{color:var(--texto-2)}
+.citem{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center}
+.citem .ibox{width:48px;height:48px}
+.citem small{display:block;font-size:.8rem;color:var(--texto-2);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.citem b{font-size:1.05rem;color:var(--grafite);user-select:all}
+form.cf{background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 24px 48px -32px rgba(29,27,25,.3);min-width:0}
+form.cf h3{grid-column:1/-1;font-size:1.25rem}
+form.cf label{display:grid;gap:6px;font-size:.88rem;font-weight:600;color:var(--texto);min-width:0}
+form.cf .full{grid-column:1/-1}
+form.cf input,form.cf select,form.cf textarea{font:inherit;font-size:.98rem;padding:12px 14px;border:1.5px solid var(--linha);border-radius:8px;background:var(--branco);color:var(--texto);width:100%;min-width:0}
+form.cf textarea{min-height:110px;resize:vertical}
+form.cf input:focus,form.cf select:focus,form.cf textarea:focus{outline:none;border-color:var(--laranja)}
+form.cf .note{grid-column:1/-1;font-size:.84rem;color:var(--texto-2)}
+form.cf .btn{grid-column:1/-1}
+@media (max-width:920px){.contact{grid-template-columns:1fr}}
+@media (max-width:520px){form.cf{grid-template-columns:1fr;padding:22px}}
+/* e-book */
+.ebook{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.ebook-capa{max-width:100%;width:340px;height:auto;justify-self:center;border-radius:6px;box-shadow:0 30px 60px -24px rgba(29,27,25,.45);transform:rotate(-2deg)}
+.ebook h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 12px}
+.ebook .sub{color:var(--texto-2);font-size:1.04rem}
+.ebook ul.itens{list-style:none;margin:18px 0 24px;padding:0;display:grid;gap:8px}
+.ebook ul.itens li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.97rem}
+.ebook ul.itens svg{width:18px;height:18px;color:var(--laranja);margin-top:3px;flex:none}
+form.cf .lgpd{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.86rem;color:var(--texto-2)}
+form.cf .lgpd input{width:18px;height:18px;padding:0;margin-top:2px;flex:none;accent-color:var(--laranja)}
+form.cf .btn.off{opacity:.55}
+form.cf .aviso{grid-column:1/-1;font-size:.84rem;color:var(--laranja-esc);font-weight:600}
+@media (max-width:920px){.ebook{grid-template-columns:1fr;gap:36px}.ebook-capa{width:240px}}
+
+
+/* rodapé */
+footer{background:var(--grafite);color:var(--texto-claro);font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-block:56px 40px}
+footer h4{color:#fff;font-size:.95rem;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .brand b{color:#fff}
+footer .about-f{margin-top:14px;max-width:34ch}
+footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:.84rem}
+@media (max-width:860px){footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer .cols{grid-template-columns:1fr}}
+
+/* whatsapp flutuante */
+.wa-float{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:8;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.06)}
+.wa-float svg{width:30px;height:30px}
+
+.lp-top{background:var(--branco);border-bottom:1px solid var(--linha)}
+.lp-top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.lp-top a.site{font-size:.9rem;font-weight:600;color:var(--texto-2);text-decoration:none}
+.lp-top a.site:hover{color:var(--laranja)}
+.lp{padding-block:48px 72px}
+.lp .ebook h1{font-size:clamp(1.9rem,4.6vw,2.8rem);margin:14px 0 12px}
+footer.lp-foot{background:var(--branco);text-align:center;font-size:.84rem;color:var(--texto-2);padding-block:24px;border-top:1px solid var(--linha)}
+@media (max-width:920px){.lp{padding-block:28px 48px}.lp .ebook-capa{width:200px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 168 215">
+    <path d="M0 26a26 26 0 0 1 26-26h116a26 26 0 0 1 26 26v171l-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18L0 197z" fill="#E4572E"/>
+    <polyline points="25,140 25,64 60,108 95,64 98,98" fill="none" stroke="#FFF8F0" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><polyline points="74,128 94,150 144,97" fill="none" stroke="#FFF8F0" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 5 5.2-1.4A9.8 9.8 0 1 0 12 2.2zm0 17.9a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9h16M4 9c0 1.7 1.3 3 3 3s2.8-1.3 2.8-3c0 1.7 1.3 3 2.2 3s2.2-1.3 2.2-3c0 1.7 1.1 3 2.8 3s3-1.3 3-3M5.5 12v8h13v-8M10 20v-4.5h4V20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 11.5h6M9 15h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c.5-3.4 3-5.5 6-5.5s5.5 2.1 6 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 5.2a3 3 0 0 1 0 5.6M18 14.8c1.6.7 2.7 2.4 3 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M7 16v-4M12 16V8M17 16v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 4h6v3H9zM8.5 11.5h7M8.5 15h4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 8V6.5M10.5 6.5h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-burger2" viewBox="0 0 24 24"><path d="M4.5 9.5a7.5 4.5 0 0 1 15 0zM3.5 12.5c1.4 1.3 2.8 1.3 4.2 0s2.8-1.3 4.3 0 2.8 1.3 4.3 0 2.8-1.3 4.2 0M4 15.5h16M5 18.5h14a0 0 0 0 1 0 0 2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10a8 5 0 0 1 16 0zM3.5 13.5h17M4.5 17h15a0 0 0 0 1 0 0 2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 17z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 17l4-7h5l3 7M13 6h3l-1 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 8L12 4l8.5 4v8L12 20l-8.5-4zM3.5 8L12 12l8.5-4M12 12v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6 3h12l-1.5 8a4.5 4.5 0 0 1-9 0zM12 15.5V21M8.5 21h7M6.6 7h10.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pizza" viewBox="0 0 24 24"><path d="M12 21L3.5 5.5A16 16 0 0 1 20.5 5.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="10" cy="9" r="1.2" fill="currentColor"/><circle cx="14" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+<header class="lp-top">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Menu Contábil, página inicial">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span><b>menu <span>contábil</span></b><small>Contabilidade para Food Service</small></span>
+    </a>
+    <a class="site" href="../">Conhecer o escritório →</a>
+  </div>
+</header>
+<main class="alt lp">
+  <div class="wrap ebook">
+    <img class="ebook-capa" src="capa.jpg" alt="Capa do e-book Do MEI à ME: o que muda quando seu delivery cresce" width="620" height="878">
+    <div>
+      <span class="eyebrow">E-book gratuito</span>
+      <h1>Do MEI à ME: <span class="hl">o que muda quando seu delivery cresce</span></h1>
+      <p class="sub">Um guia direto para donos de lanchonete, hamburgueria e delivery que estão chegando no limite do MEI.</p>
+      <ul class="itens">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Limite do MEI em 2026 e o novo teto aprovado pelo Congresso</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>O que acontece se você estourar o faturamento, com simulações</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Passo a passo e checklist da transição para microempresa</li>
+      </ul>
+      <form class="cf" id="ef" novalidate>
+        <h3>Receba o e-book no seu WhatsApp</h3>
+        <label for="e-nome">Nome<input id="e-nome" autocomplete="name" placeholder="Seu nome"></label>
+        <label for="e-seg">Segmento
+          <select id="e-seg">
+            <option>Restaurante</option><option>Lanchonete</option><option>Hamburgueria</option><option>Delivery / dark kitchen</option><option>Marmitaria</option><option>Bar</option><option>Pizzaria</option><option>Outro</option>
+          </select>
+        </label>
+        <label for="e-sit" class="full">Situação atual
+          <select id="e-sit">
+            <option>Sou MEI</option><option>Ainda não tenho CNPJ</option><option>Já sou ME ou EPP</option>
+          </select>
+        </label>
+        <label class="lgpd" for="e-ok"><input type="checkbox" id="e-ok">Concordo em receber o e-book e conteúdos da Menu Contábil pelo WhatsApp. Posso pedir para sair quando quiser.</label>
+        <a class="btn off" id="e-send" href="https://wa.me/5585988716021" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Receber o e-book no WhatsApp</a>
+        <p class="aviso" id="e-aviso" hidden>Preencha seu nome e marque a caixa de consentimento para continuar.</p>
+        <p class="note">O WhatsApp abre com a mensagem pronta. É só enviar que mandamos o e-book.</p>
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="lp-foot">Menu Contábil · Contabilidade para Food Service · <a href="../">menucontabil.net.br</a> · Responsável técnico: Roberto Brandão · CRC/CE 30161/O-7</footer>
+<script>
+(function(){
+  const g=id=>document.getElementById(id);
+  const btn=g('e-send'), aviso=g('e-aviso');
+  const q=new URLSearchParams(location.search);
+  const origem=q.get('origem')||'Instagram';
+  const ok=()=>g('e-nome').value.trim()!=='' && g('e-ok').checked;
+  function build(){
+    const msg=['Olá! Vim pelo '+origem+' e quero receber o e-book gratuito "Do MEI à ME".','Nome: '+g('e-nome').value.trim(),'Segmento: '+g('e-seg').value,'Situação: '+g('e-sit').value,'Autorizo receber o e-book e conteúdos da Menu Contábil pelo WhatsApp.'].join('\n');
+    btn.href='https://wa.me/5585988716021?text='+encodeURIComponent(msg);
+    btn.classList.toggle('off',!ok());
+    if(ok()) aviso.hidden=true;
+  }
+  ['e-nome','e-seg','e-sit','e-ok'].forEach(id=>{g(id).addEventListener('input',build);g(id).addEventListener('change',build)});
+  btn.addEventListener('click',e=>{if(!ok()){e.preventDefault();aviso.hidden=false;}});
+  g('ef').addEventListener('submit',e=>e.preventDefault());
+  build();
+})();
+</script>
+</body>
+</html>
