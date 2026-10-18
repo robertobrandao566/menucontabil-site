@@ -63,10 +63,10 @@ svg.i{width:22px;height:22px;flex:none}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand svg{width:32px;height:36px;flex:none}
-.brand b{font-weight:800;font-size:1.3rem;letter-spacing:-.03em;color:var(--grafite)}
-.brand b span{color:var(--laranja)}
-.brand small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2);margin-top:-2px}
+.brand svg{width:36px;height:46px;flex:none}
+.brand b{font-weight:800;font-size:1.45rem;letter-spacing:-.03em;color:var(--grafite)}
+.brand b span{color:var(--laranja);font-weight:400}
+.brand small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--marrom);margin-top:1px}
 nav.links{display:flex;gap:26px;font-size:.94rem;font-weight:600}
 nav.links a{text-decoration:none;color:var(--texto-2);padding-block:6px;border-bottom:2px solid transparent}
 nav.links a:hover{color:var(--grafite);border-color:var(--laranja)}
@@ -74,15 +74,16 @@ nav.links a:hover{color:var(--grafite);border-color:var(--laranja)}
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--creme) 0%,var(--branco) 100%)}
-.hero .wrap{display:block;padding-block:80px 88px}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;padding-block:80px 88px}
 .hero .wrap > div{max-width:780px}
+.hero-mark{width:clamp(180px,20vw,250px);height:auto;filter:drop-shadow(0 24px 30px rgba(228,87,46,.25))}
 .hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);margin-top:16px}
 .hero .lede{font-size:1.12rem;color:var(--texto-2);max-width:52ch;margin-top:20px}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .trust{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--linha);list-style:none;padding-left:0;margin-bottom:0;font-size:.92rem;font-weight:600;color:var(--texto)}
 .trust li{display:flex;align-items:center;gap:8px}
 .trust svg{width:18px;height:18px;color:var(--laranja)}
-@media (max-width:920px){.hero .wrap{padding-block:52px 60px}}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr;padding-block:52px 60px}.hero-mark{display:none}}
 @media (max-width:480px){
 section.block{padding-block:88px}
 .alt{background:var(--creme)}
@@ -186,9 +187,9 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="logo" viewBox="0 0 34 38">
-    <path d="M6 1h22a5 5 0 0 1 5 5v27l-3.5 3.5-3.5-3.5-3.5 3.5-3.5-3.5-3.5 3.5-3.5-3.5-3.5 3.5L1 33V6a5 5 0 0 1 5-5z" fill="#E4572E"/>
-    <polyline points="8.5,25 8.5,10 14,17.5 19.5,10 19.5,19 22,22 27.5,13" fill="none" stroke="#FFF8F0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <symbol id="logo" viewBox="0 0 168 215">
+    <path d="M0 26a26 26 0 0 1 26-26h116a26 26 0 0 1 26 26v171l-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18-16.8-18-16.8 18L0 197z" fill="#E4572E"/>
+    <polyline points="25,140 25,64 60,108 95,64 98,98" fill="none" stroke="#FFF8F0" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/><polyline points="74,128 94,150 144,97" fill="none" stroke="#FFF8F0" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -259,7 +260,8 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Foco exclusivo em food service</li>
         </ul>
       </div>
-</div>
+      <svg class="hero-mark" viewBox="0 0 168 215" role="img" aria-label="Símbolo da Menu Contábil"><use href="#logo"/></svg>
+    </div>
   </section>
 
   <section class="block" id="sobre">
