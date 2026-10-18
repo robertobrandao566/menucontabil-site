@@ -163,6 +163,20 @@ form.cf .note{grid-column:1/-1;font-size:.84rem;color:var(--texto-2)}
 form.cf .btn{grid-column:1/-1}
 @media (max-width:920px){.contact{grid-template-columns:1fr}}
 @media (max-width:520px){form.cf{grid-template-columns:1fr;padding:22px}}
+/* e-book */
+.ebook{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.ebook-capa{max-width:100%;width:340px;height:auto;justify-self:center;border-radius:6px;box-shadow:0 30px 60px -24px rgba(29,27,25,.45);transform:rotate(-2deg)}
+.ebook h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin:14px 0 12px}
+.ebook .sub{color:var(--texto-2);font-size:1.04rem}
+.ebook ul.itens{list-style:none;margin:18px 0 24px;padding:0;display:grid;gap:8px}
+.ebook ul.itens li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.97rem}
+.ebook ul.itens svg{width:18px;height:18px;color:var(--laranja);margin-top:3px;flex:none}
+form.cf .lgpd{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.86rem;color:var(--texto-2)}
+form.cf .lgpd input{width:18px;height:18px;padding:0;margin-top:2px;flex:none;accent-color:var(--laranja)}
+form.cf .btn.off{opacity:.55}
+form.cf .aviso{grid-column:1/-1;font-size:.84rem;color:var(--laranja-esc);font-weight:600}
+@media (max-width:920px){.ebook{grid-template-columns:1fr;gap:36px}.ebook-capa{width:240px}}
+
 
 /* rodapé */
 footer{background:var(--grafite);color:var(--texto-claro);font-size:.92rem}
@@ -329,6 +343,40 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
     </div>
   </section>
 
+  <section class="block alt" id="ebook">
+    <div class="wrap ebook">
+      <img class="ebook-capa" src="ebook/capa.jpg" alt="Capa do e-book Do MEI à ME: o que muda quando seu delivery cresce" width="620" height="878" loading="lazy">
+      <div>
+        <span class="eyebrow">E-book gratuito</span>
+        <h2>Do MEI à ME: <span class="hl">o que muda quando seu delivery cresce</span></h2>
+        <p class="sub">Um guia direto para donos de lanchonete, hamburgueria e delivery que estão chegando no limite do MEI.</p>
+        <ul class="itens">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Limite do MEI em 2026 e o novo teto aprovado pelo Congresso</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>O que acontece se você estourar o faturamento, com simulações</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Passo a passo e checklist da transição para microempresa</li>
+        </ul>
+        <form class="cf" id="ef" novalidate>
+          <h3>Receba o e-book no seu WhatsApp</h3>
+          <label for="e-nome">Nome<input id="e-nome" autocomplete="name" placeholder="Seu nome"></label>
+          <label for="e-seg">Segmento
+            <select id="e-seg">
+              <option>Restaurante</option><option>Lanchonete</option><option>Hamburgueria</option><option>Delivery / dark kitchen</option><option>Marmitaria</option><option>Bar</option><option>Pizzaria</option><option>Outro</option>
+            </select>
+          </label>
+          <label for="e-sit" class="full">Situação atual
+            <select id="e-sit">
+              <option>Sou MEI</option><option>Ainda não tenho CNPJ</option><option>Já sou ME ou EPP</option>
+            </select>
+          </label>
+          <label class="lgpd" for="e-ok"><input type="checkbox" id="e-ok">Concordo em receber o e-book e conteúdos da Menu Contábil pelo WhatsApp. Posso pedir para sair quando quiser.</label>
+          <a class="btn off" id="e-send" href="https://wa.me/5585988716021" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Receber o e-book no WhatsApp</a>
+          <p class="aviso" id="e-aviso" hidden>Preencha seu nome e marque a caixa de consentimento para continuar.</p>
+          <p class="note">O WhatsApp abre com a mensagem pronta. É só enviar que mandamos o e-book.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="duvidas">
     <div class="wrap">
       <div class="head center">
@@ -424,6 +472,24 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
   }
   ids.forEach(id=>{const el=document.getElementById(id);el.addEventListener('input',build);el.addEventListener('change',build)});
   document.getElementById('cf').addEventListener('submit',e=>e.preventDefault());
+  build();
+})();
+</script>
+
+<script>
+(function(){
+  const g=id=>document.getElementById(id);
+  const btn=g('e-send'), aviso=g('e-aviso');
+  const ok=()=>g('e-nome').value.trim()!=='' && g('e-ok').checked;
+  function build(){
+    const msg=['Olá! Quero receber o e-book gratuito "Do MEI à ME".','Nome: '+g('e-nome').value.trim(),'Segmento: '+g('e-seg').value,'Situação: '+g('e-sit').value,'Autorizo receber o e-book e conteúdos da Menu Contábil pelo WhatsApp.'].join('\n');
+    btn.href='https://wa.me/5585988716021?text='+encodeURIComponent(msg);
+    btn.classList.toggle('off',!ok());
+    if(ok()) aviso.hidden=true;
+  }
+  ['e-nome','e-seg','e-sit','e-ok'].forEach(id=>{g(id).addEventListener('input',build);g(id).addEventListener('change',build)});
+  btn.addEventListener('click',e=>{if(!ok()){e.preventDefault();aviso.hidden=false;}});
+  g('ef').addEventListener('submit',e=>e.preventDefault());
   build();
 })();
 </script>
