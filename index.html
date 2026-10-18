@@ -63,10 +63,10 @@ svg.i{width:22px;height:22px;flex:none}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand svg{width:36px;height:46px;flex:none}
-.brand b{font-weight:800;font-size:1.45rem;letter-spacing:-.03em;color:var(--grafite)}
-.brand b span{color:var(--laranja);font-weight:400}
-.brand small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--marrom);margin-top:1px}
+.brand svg{width:29px;height:37px;flex:none}
+.brand b{font-weight:800;font-size:1.3rem;letter-spacing:-.03em;color:var(--grafite)}
+.brand b span{color:var(--laranja)}
+.brand small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-2);margin-top:-2px}
 nav.links{display:flex;gap:26px;font-size:.94rem;font-weight:600}
 nav.links a{text-decoration:none;color:var(--texto-2);padding-block:6px;border-bottom:2px solid transparent}
 nav.links a:hover{color:var(--grafite);border-color:var(--laranja)}
@@ -74,17 +74,15 @@ nav.links a:hover{color:var(--grafite);border-color:var(--laranja)}
 
 /* hero */
 .hero{background:linear-gradient(180deg,var(--creme) 0%,var(--branco) 100%)}
-.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;padding-block:80px 88px}
+.hero .wrap{padding-block:72px 80px}
 .hero .wrap > div{max-width:780px}
-.hero-mark{width:clamp(180px,20vw,250px);height:auto;filter:drop-shadow(0 24px 30px rgba(228,87,46,.25))}
 .hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);margin-top:16px}
 .hero .lede{font-size:1.12rem;color:var(--texto-2);max-width:52ch;margin-top:20px}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .trust{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:32px;padding-top:24px;border-top:1px solid var(--linha);list-style:none;padding-left:0;margin-bottom:0;font-size:.92rem;font-weight:600;color:var(--texto)}
 .trust li{display:flex;align-items:center;gap:8px}
 .trust svg{width:18px;height:18px;color:var(--laranja)}
-@media (max-width:920px){.hero .wrap{grid-template-columns:1fr;padding-block:52px 60px}.hero-mark{display:none}}
-@media (max-width:480px){
+@media (max-width:920px){.hero .wrap{padding-block:48px 56px}}
 section.block{padding-block:88px}
 .alt{background:var(--creme)}
 .head{display:grid;gap:14px;max-width:720px;margin-bottom:44px}
@@ -208,7 +206,7 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-plate" viewBox="0 0 24 24"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 8V6.5M10.5 6.5h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3.5c0 1 1 1.3 1 2.5M12 3.5c0 1 1 1.3 1 2.5M4 21h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-burger2" viewBox="0 0 24 24"><path d="M4.5 9.5a7.5 4.5 0 0 1 15 0zM3.5 12.5c1.4 1.3 2.8 1.3 4.2 0s2.8-1.3 4.3 0 2.8 1.3 4.3 0 2.8-1.3 4.2 0M4 15.5h16M5 18.5h14a0 0 0 0 1 0 0 2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-burger" viewBox="0 0 24 24"><path d="M4 10a8 5 0 0 1 16 0zM3.5 13.5h17M4.5 17h15a0 0 0 0 1 0 0 2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 17z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
   <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 17l4-7h5l3 7M13 6h3l-1 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 8L12 4l8.5 4v8L12 20l-8.5-4zM3.5 8L12 12l8.5-4M12 12v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
@@ -253,14 +251,12 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
         <p class="lede">Cuidamos dos impostos, da folha de pagamento e da gestão do seu negócio de alimentação, para você focar na cozinha e no atendimento ao cliente.</p>
         <div class="ctas">
           <a class="btn" href="https://wa.me/5585988716021?text=Ol%C3%A1%2C%20quero%20abrir%20minha%20empresa%20com%20a%20Menu%20Cont%C3%A1bil" target="_blank" rel="noopener">Abrir minha empresa</a>
-          <a class="btn out" href="#servicos">Conhecer os serviços</a>
         </div>
         <ul class="trust">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Atendimento 100% digital</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Foco exclusivo em food service</li>
         </ul>
       </div>
-      <svg class="hero-mark" viewBox="0 0 168 215" role="img" aria-label="Símbolo da Menu Contábil"><use href="#logo"/></svg>
     </div>
   </section>
 
@@ -307,8 +303,8 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
       </div>
       <ul class="segs">
         <li><svg aria-hidden="true"><use href="#i-plate"/></svg>Restaurantes</li>
-        <li><svg aria-hidden="true"><use href="#i-cup"/></svg>Lanchonetes</li>
-        <li><svg aria-hidden="true"><use href="#i-burger"/></svg>Hamburguerias</li>
+        <li><svg aria-hidden="true"><use href="#i-burger"/></svg>Lanchonetes</li>
+        <li><svg aria-hidden="true"><use href="#i-burger2"/></svg>Hamburguerias</li>
         <li><svg aria-hidden="true"><use href="#i-bike"/></svg>Delivery e dark kitchens</li>
         <li><svg aria-hidden="true"><use href="#i-box"/></svg>Marmitarias</li>
         <li><svg aria-hidden="true"><use href="#i-glass"/></svg>Bares</li>
@@ -332,7 +328,7 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
     </div>
   </section>
 
-  <section class="block alt" id="duvidas">
+  <section class="block" id="duvidas">
     <div class="wrap">
       <div class="head center">
         <span class="eyebrow">Dúvidas frequentes</span>
@@ -347,7 +343,7 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
     </div>
   </section>
 
-  <section class="block" id="contato">
+  <section class="block alt" id="contato">
     <div class="wrap contact">
       <div class="cinfo">
         <span class="eyebrow">Contato</span>
@@ -369,7 +365,7 @@ footer .legal{border-top:1px solid #36312D;padding-block:20px;display:flex;flex-
         </label>
         <label for="f-sit" class="full">Situação atual
           <select id="f-sit">
-            <option>Quero abrir uma empresa</option><option>Já tenho empresa e quero contratar a contabilidade</option><option>Sou MEI e preciso migrar para ME</option><option>Outro assunto</option>
+            <option>Quero abrir uma empresa</option><option>Sou MEI e preciso migrar para ME</option><option>Outro assunto</option>
           </select>
         </label>
         <label for="f-msg" class="full">Mensagem (opcional)<textarea id="f-msg" placeholder="Conte um pouco sobre o seu negócio"></textarea></label>
